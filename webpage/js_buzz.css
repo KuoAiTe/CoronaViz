@@ -1,0 +1,231 @@
+body {
+  text-shadow: 0 1px 0 #ffffff;
+}
+
+.map_container {
+  padding-top: 6rem;
+}
+
+#map {
+  height: 75vh;
+  max-width: 100%;
+}
+
+span.line {
+  display: inline-block;
+}
+
+.hjs_text {
+  background-color: #FFFFF6;
+  line-height: 1.2;
+  font-family: "Helvetica", Helvet, serif;
+}
+
+.hjs_text h4, .hjs_text h5 {
+  width: 100%;
+  font-weight: bold;
+  font-size: 20pt;
+  color: #ffffff;
+  font-family: Arial, helvetica, serif;
+  background-color: #D5D0CD;
+  border: 1px solid gray;
+}
+
+.hjs_text a {
+  color: #986635;
+}
+
+.hjs_text a:hover {
+  color: red;
+  background: #aaaaaa;
+}
+
+.hjs_text ol {
+  list-style-position: outside;
+}
+
+.bubble {
+  background: white;
+  color: black;
+  padding: 4px 12px;
+  position: absolute;
+  border-radius: 4px;
+  transform: translateX(-50%);
+}
+
+#slider-range {
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 0.5em;
+  background-color: #464646;
+}
+
+#progress {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  left: 20%;
+  top: 45%;
+  width: 50%;
+  height: 20px;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  padding: 2px;
+}
+
+#progress-bar {
+  width: 0;
+  height: 100%;
+  background-color: #76A6FC;
+  border-radius: 4px;
+}
+
+#loader {
+  display: none;
+  border: 16px solid #A9A9A9; /* Dark grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1000;
+  left: 45%;
+  top: 45%;
+  width: 10vh;
+  height: 10vh;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media (min-width: 768px) {
+  #control_panel {
+    overflow-y: scroll;
+    height: 88vh;
+  }
+
+  body {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 361px) {
+  #coronaviz_brand {
+    font-size: 1rem;
+  }
+}
+
+.selected .circle {
+    border-width: 5px !important;
+}
+
+#info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  max-width: 33vh;
+  position: absolute;
+  z-index: 1000;
+  white-space: nowrap;
+}
+
+#info h4 {
+  margin: 0 0 5px;
+  color: #777;
+}
+
+.circle_active_small, .circle_active_med, .circle_active_large,
+.circle_twitter_small, .circle_twitter_med, .circle_twitter_large,
+.circle_recovered_small, .circle_recovered_med, .circle_recovered_large,
+.circle_deaths_small, .circle_deaths_med, .circle_deaths_large,
+.circle_confirmed_small, .circle_confirmed_med, .circle_confirmed_large,
+.circle_news_small, .circle_news_med, .circle_news_large,
+.circle_vaccine_small, .circle_vaccine_med, .circle_vaccine_large,
+.circle_incidence_small, .circle_incidence_med, .circle_incidence_large,
+.circle_mortality_small, .circle_mortality_med, .circle_mortality_large,
+.circle_recoveryrate_small, .circle_recoveryrate_med, .circle_recoveryrate_large {
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+}
+
+.circle_active_small, .circle_twitter_small, .circle_recovered_small, .circle_deaths_small, .circle_confirmed_small, .circle_news_small, .circle_vaccine_small, .circle_incidence_small, .circle_mortality_small, .circle_recoveryrate_small {
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+}
+
+.circle_active_med, .circle_twitter_med, .circle_recovered_med, .circle_deaths_med, .circle_confirmed_med, .circle_news_med, .circle_vaccine_med, .circle_incidence_med, .circle_mortality_med, .circle_recoveryrate_med {
+  width: 41px;
+  height: 41px;
+  line-height: 41px;
+}
+
+.circle_active_large, .circle_twitter_large, .circle_recovered_large, .circle_deaths_large, .circle_confirmed_large, .circle_news_large, .circle_vaccine_large, .circle_incidence_large, .circle_mortality_large, .circle_recoveryrate_large {
+  width: 59px;
+  height: 59px;
+  line-height: 59px;
+}
+
+.circle_confirmed_small, .circle_confirmed_med, .circle_confirmed_large {
+  border: dotted black;
+}
+
+.circle_deaths_small, .circle_deaths_med, .circle_deaths_large {
+  border: dotted red;
+}
+
+.circle_recovered_small, .circle_recovered_med, .circle_recovered_large {
+  border: dotted green;
+}
+.circle_vaccine_small, .circle_vaccine_med, .circle_vaccine_large {
+  border: dotted blue;
+}
+
+.circle_active_small, .circle_active_med, .circle_active_large {
+  border: dotted orange;
+}
+
+.circle_incidence_small, .circle_incidence_med, .circle_incidence_large {
+  border: solid black;
+}
+
+.circle_mortality_small, .circle_mortality_med, .circle_mortality_large {
+  border: solid red;
+}
+
+.circle_recoveryrate_small, .circle_recoveryrate_med, .circle_recoveryrate_large {
+  border: solid green;
+}
+
+.circle_twitter_small, .circle_twitter_med, .circle_twitter_large {
+  background-color: rgba(85, 85, 250, 0.6);
+}
+
+.circle_news_small {
+  background-color: rgba(181, 226, 140, 0.6);
+}
+
+.circle_news_med {
+  background-color: rgba(241, 211, 87, 0.6);
+}
+
+.circle_news_large {
+  background-color: rgba(253, 156, 115, 0.6);
+}
+
+.input-group-text{
+  background-color: white;
+  border: 1x solid #ced4da;
+}
